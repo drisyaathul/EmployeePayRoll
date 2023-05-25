@@ -41,4 +41,8 @@ mysql> desc employee_tb;
 | salary     | decimal(10,2) | YES  |     | NULL    |                |
 +------------+---------------+------+-----+---------+----------------+
 5 rows in set (0.02 sec)
+#UC3:-
+mysql> insert into employee_tb(name,age,department,salary)values('Drisya',18,'CIVIL',5000.00),('Divya',19,'IT',6000.00),('Athul',20,'EC',8000.00);
+Query OK, 3 rows affected (0.02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
 
