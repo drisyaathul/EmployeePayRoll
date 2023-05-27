@@ -183,12 +183,26 @@ mysql> alter table employee_tb add department varchar(20) after phonenumber;
 Query OK, 0 rows affected (0.02 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
+mysql> update employee_tb set phonenumber = 9999999 where id = 1;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_tb set address = 'cochin',phonenumber = 98888899 where id = 2;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_tb set address = 'cochin',phonenumber = 888788899 where id = 3;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
 mysql> select * from employee_tb;
-+----+--------+------+---------+-------------+------------+---------+
-| id | name   | age  | address | phonenumber | department | salary  |
-+----+--------+------+---------+-------------+------------+---------+
-|  1 | Drisya |   18 | NULL    |        NULL | CIVIL      | 5000.00 |
-|  2 | Divya  |   19 | NULL    |        NULL | IT         | 6000.00 |
-|  3 | Athul  |   20 | NULL    |        NULL | EC         | 8000.00 |
-+----+--------+------+---------+-------------+------------+---------+
++----+--------+------+-----------+-------------+------------+---------+
+| id | name   | age  | address   | phonenumber | department | salary  |
++----+--------+------+-----------+-------------+------------+---------+
+|  1 | Drisya |   18 | vyshagham |     9999999 | CIVIL      | 5000.00 |
+|  2 | Divya  |   19 | calicut   |    77788899 | IT         | 6000.00 |
+|  3 | Athul  |   20 | cochin    |   888788899 | EC         | 8000.00 |
++----+--------+------+-----------+-------------+------------+---------+
 3 rows in set (0.00 sec)
+
+
