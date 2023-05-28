@@ -263,3 +263,7 @@ mysql> select * from employee_tb;
 |  4 | Terissa | female |   22 | lumut     |   778889999 | IT         | 10000.00 |     20000 |      80000 |       10000 |      30000 |  1800000 |
 +----+---------+--------+------+-----------+-------------+------------+----------+-----------+------------+-------------+------------+----------+
 4 rows in set (0.00 sec)
+
+#UC11:-
+mysql> create table employee_department(Emp_id int primary key, dept_id int, foreign key (emp_id) references employee_tb(id));
+Query OK, 0 rows affected (0.06 sec)
